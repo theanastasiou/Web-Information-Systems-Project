@@ -1,0 +1,17 @@
+#confirmed-table{
+    margin-top: 20px;
+}
+#second{
+    margin-top: 20px;
+}
+
+#btn{
+    margin-top: 19px;
+}
+
+#main{
+    height: 100%;
+    background: url(../full.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  fastapi-carrier:
+    image: carrier-fastapi:latest
+    build: .
+    ports:
+      - "8001:8001"
+    environment:
+      - DATABASE_URI=postgresql://postgres:password@localhost/postgres
+    network_mode: "host"  
+
+    

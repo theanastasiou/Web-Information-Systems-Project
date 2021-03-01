@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  fastapi-notification:
+    image: notification-fastapi:latest
+    build: .
+    ports:
+      - "8003:8003"
+    environment:
+      - DATABASE_URI=postgresql://postgres:password@localhost/postgres
+    network_mode: "host"  
+
+    

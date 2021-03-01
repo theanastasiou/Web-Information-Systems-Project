@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  fastapi-user:
+    image: user-fastapi:latest
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URI=postgresql://postgres:password@localhost/postgres
+    network_mode: "host"  
+  postgres:
+    image: postgres:12.4
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=password
+    - POSTGRES_DB=postgres
+    
